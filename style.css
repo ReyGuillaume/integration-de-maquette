@@ -1,0 +1,241 @@
+::after,
+::before,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+body > * {
+    padding-right: 15vw;
+    padding-left: 15vw;
+}
+.primary-button {
+    color: #b52547;
+    background: none;
+    border: #b52547 1px solid;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: .5rem 1rem;
+}
+ul {
+    list-style-type: square;
+}
+ul li::marker {
+    color: #b52547;
+}
+.hide {
+    display: none;
+}
+/* ======================== Temp ======================== */
+
+img {
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+}
+
+/* ======================== Logo ======================== */
+
+.heading {
+    position: relative;
+    color: #b52547;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-bottom: #e5e5e5 1px solid;
+    padding: 2rem 0 1rem;
+    text-transform: uppercase;
+}
+.heading h1 {
+    font-size: 2.1rem;
+}
+.heading h1 + .logo {
+    width: 4.2rem;
+    height: 4.2rem;
+    border: #b52547 3px solid;
+    border-radius: 50%;
+}
+
+/* ======================== Languages ======================== */
+.lang {
+    list-style-type: none;
+    position: absolute;
+    top: 0;
+    right: .5rem;
+    display: flex;
+    gap: 2rem;
+}
+.lang a {
+    color: #000;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .75rem;
+}
+.lang .selected a {
+    color: #b52547;
+    opacity: 0.8;
+}
+
+/* ======================== Navigation ======================== */
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .75rem;
+    padding: .75em 1.25em;
+}
+.menu .selected a {
+    color: #b52547;
+}
+.menu .selected::after {
+    content: "";
+    display: block;
+    background-color: #b52547;
+    width: 50%;
+    height: 2px;
+    margin: auto;
+}
+
+/* ======================== Carousel ======================== */
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.carousel-element {
+    position: relative;
+}
+.carousel-element img {
+    width: 75vw;
+    height: 30vw;
+}
+.carousel-element p {
+    color: #FFF;
+    background: #b52547;
+    padding: 2rem;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 10vw;
+    left: 2.5rem;
+    font-size: 1.25vw;
+    width: 32.5vw;
+    max-width: 26rem;
+}
+.carousel-radio {
+    padding: 1rem;
+    display: flex;
+    gap: 1em;
+}
+
+/* ======================== Articles ======================== */
+
+body > article {
+    background: #FFF;
+    font-size: .85rem;
+}
+body article:nth-child(even) {
+    background: #F5f5f5;
+}
+/* ------------------------ Article 1 ------------------------ */
+.article1 {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 8rem;
+}
+.article1 > section {
+    background-color: #FFF;
+    position: absolute;
+    left: 15vw;
+    width: 42.5vw;
+    max-width: 40%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 1;
+}
+.article1 > section > p {
+    overflow: hidden;
+    max-height: 15rem;
+}
+.article1 > section > .primary-button {
+    margin-right: auto;
+}
+.article1 .label {
+    position: relative;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b52547;
+    border-radius: 50%;
+    border: 1px solid #b52547;
+    width: 5.625rem;
+    height: 5.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 1rem;
+}
+
+/* ------------------------ Article 2 ------------------------ */
+
+.article2 {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 20rem;
+    position: relative;
+}
+.article2 > .container {
+    position: absolute;
+    top: -5rem;
+    right: 15vw;
+    width: 37.5vw;
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.article2 > .container > img {
+    width: 100%;
+    height: 20vw;
+    min-height: 15rem;
+}
+.article2 > .container > section {
+    background-color: #F5f5f5;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+}
+.article2 > .container > section > h2{
+    display: flex;
+    justify-content: flex-start;
+}
+.article2 > .container > section > h2 > img {
+    width: 2.5em;
+    height: 2.5em;
+    object-fit: cover;
+}
+.article2 > .container > section > ul{
+    margin-left: 1rem;
+}
