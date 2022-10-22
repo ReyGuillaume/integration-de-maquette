@@ -271,6 +271,7 @@ body article:nth-child(even) {
     gap: 1rem;
     padding: 2rem;
     padding-bottom: 7rem;
+    overflow: hidden;
     z-index: 2;
 }
 .article2 > .container > section > h2{
