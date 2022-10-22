@@ -13,14 +13,14 @@
         <div class="heading">
             <h1>Logo</h1>
             <div class="logo"></div>
-            <ul class="lang">
+            <ul class="lang hide">
                 <li class="lang-item selected"><a href="#">Fr</a></li>
                 <li class="lang-item"><a href="#">En</a></li>
                 <li class="lang-item"><a href="#">De</a></li>
             </ul>
         </div>
 
-        <nav class="">
+        <nav class="hide">
             <ul class="menu">
                 <li class="nav-item selected"><a href="#">Accueil</a></li>
                 <li class="nav-item"><a href="#">Menu 1</a></li>
@@ -93,33 +93,42 @@
     <article class="article3">
         
         <h2>Actualités</h2>
-        <section>
-            <header>
-                <img src="./images/section-img.jpg" alt="section image">
-                <p class="date">20.06.2022</p>
-                <h3>Rapport annuel 2021</h3>
-            </header>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis id ipsum, sed obcaecati eius eveniet?</p>
-            <a href="#" class="download-button">Télécharger</a>
-        </section>
-        <section>
-            <header>
-                <img src="./images/section-img.jpg" alt="section image">
-                <p class="date">20.06.2022</p>
-                <h3>Rapport annuel 2021</h3>
-            </header>
-            <p>Lorem ipsum</p>
-            <a href="#" class="download-button">Télécharger</a>
-        </section>
+
+        <div class="container">
+            <section>
+                <header>
+                    <img src="./images/section-img.jpg" alt="section image">
+                    <div class="infos">
+                        <p class="date">20.06.2022</p>
+                        <h3>Rapport annuel 2021</h3>
+                    </div>
+                </header>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis id ipsum, sed obcaecati eius eveniet?</p>
+                <a href="#" class="download-button" download="#">Télécharger</a>
+            </section>
+
+            <section>
+                <header>
+                    <img src="./images/section-img.jpg" alt="section image">
+                    <div class="infos">
+                        <p class="date">20.06.2022</p>
+                        <h3>Rapport annuel 2021</h3>
+                    </div>
+                </header>
+                <p>Lorem ipsum</p>
+                <a href="#" class="download-button" download="#">Télécharger</a>
+            </section>
+        </div>
 
         <a href="#" class="primary-button">Chiffres clés</a>
+
     </article>
 
     <footer>
         <ul>
             <li>
                 <a href="#">Lorem ipsum</a>
-                <ul>
+                <ul class="hide">
                     <li>Lorem, ipsum</li>
                     <li>Lorem, ipsum</li>
                     <li>Lorem, ipsum</li>
@@ -129,7 +138,7 @@
 
             <li>
                 <a href="#">Lorem ipsum</a>
-                <ul>
+                <ul class="hide">
                     <li>Lorem, ipsum</li>
                     <li>Lorem, ipsum</li>
                     <li>Lorem, ipsum</li>
@@ -139,7 +148,7 @@
 
             <li>
                 <a href="#">Lorem ipsum</a>
-                <ul>
+                <ul class="hide">
                     <li>Lorem, ipsum</li>
                     <li>Lorem, ipsum</li>
                     <li>Lorem, ipsum</li>
@@ -149,7 +158,7 @@
 
             <li>
                 <a href="#">Lorem ipsum</a>
-                <ul>
+                <ul class="hide">
                     <li>Lorem, ipsum</li>
                     <li>Lorem, ipsum</li>
                     <li>Lorem, ipsum</li>
@@ -158,7 +167,7 @@
             </li>
         </ul>
 
-        <div>
+        <div class="infos">
             <div>
                 <P>Lorem</P>
                 <P>Lorem ipsum</P>

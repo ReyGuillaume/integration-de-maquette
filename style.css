@@ -10,9 +10,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
-body > * {
-    padding-right: 15vw;
-    padding-left: 15vw;
+h2 {
+    text-transform: uppercase;
 }
 .primary-button {
     color: #b52547;
@@ -22,15 +21,20 @@ body > * {
     text-transform: uppercase;
     font-weight: bold;
     padding: .5rem 1rem;
+    margin-right: auto;
+}
+.download-button {
+    color: #b52547;
+    background: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 ul {
     list-style-type: square;
 }
 ul li::marker {
     color: #b52547;
-}
-.hide {
-    display: none;
 }
 /* ======================== Temp ======================== */
 
@@ -66,6 +70,7 @@ img {
 }
 
 /* ======================== Languages ======================== */
+
 .lang {
     list-style-type: none;
     position: absolute;
@@ -121,6 +126,9 @@ img {
     flex-direction: column;
     align-items: center;
 }
+.carousel-element.hide {
+    display: none;
+}
 .carousel-element {
     position: relative;
 }
@@ -146,6 +154,7 @@ img {
     gap: 1em;
 }
 
+
 /* ======================== Articles ======================== */
 
 body > article {
@@ -153,13 +162,13 @@ body > article {
     font-size: .85rem;
 }
 body article:nth-child(even) {
-    background: #F5f5f5;
+    background: #F2F3F5;
 }
 /* ------------------------ Article 1 ------------------------ */
 .article1 {
     display: flex;
     justify-content: flex-end;
-    padding-bottom: 8rem;
+    padding-bottom: min(calc(10vw + 1rem), 5rem);
 }
 .article1 > section {
     background-color: #FFF;
@@ -176,9 +185,6 @@ body article:nth-child(even) {
 .article1 > section > p {
     overflow: hidden;
     max-height: 15rem;
-}
-.article1 > section > .primary-button {
-    margin-right: auto;
 }
 .article1 .label {
     position: relative;
@@ -202,30 +208,32 @@ body article:nth-child(even) {
 .article2 {
     display: flex;
     justify-content: flex-start;
-    padding-bottom: 20rem;
+    padding-top: calc(-.75vw + 55rem);
+    padding-bottom: 7rem;
     position: relative;
 }
 .article2 > .container {
     position: absolute;
     top: -5rem;
     right: 15vw;
-    width: 37.5vw;
-    max-width: 40%;
+    width: 35vw;
+    max-width: 50%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 .article2 > .container > img {
     width: 100%;
-    height: 20vw;
+    height: 25vw;
     min-height: 15rem;
 }
 .article2 > .container > section {
-    background-color: #F5f5f5;
+    background-color: #F2F3F5;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     padding: 2rem;
+    z-index: 2;
 }
 .article2 > .container > section > h2{
     display: flex;
@@ -238,4 +246,148 @@ body article:nth-child(even) {
 }
 .article2 > .container > section > ul{
     margin-left: 1rem;
+}
+.article2 > img {
+    position: absolute;
+    height: 10rem;
+    z-index: 1;
+}
+
+/* ------------------------ Article 3 ------------------------ */
+
+.article3 {
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+.article3 > * {
+    margin: 1.5rem 1.5rem;
+}
+.article3 > .container {
+    display: grid;
+	grid-template-columns: repeat(auto-fill,minmax(25rem,1fr));
+	grid-gap: 2rem;
+}
+.article3 > .container > section {
+    background: #F2F3F5;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+.article3 > .container > section > header > img {
+    width: 6rem;
+    height: 6rem;
+    position: relative;
+    right: 1.75rem;
+    bottom: 1.75rem;
+    float: left;
+}
+.article3 > .container > section > header > div {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    font-weight: bold;
+}
+.article3 > .container > section > header > div::after {
+    content: "";
+    display: block;
+    background-color: #b52547;
+    width: 3rem;
+    height: 3px;
+}
+.article3 > .container > section > p {
+    min-height: 3rem;
+}
+.article3 > .primary-button {
+    margin-right: auto;
+}
+
+/* ======================== Media Query ======================== */
+footer {
+    background: #cdcdcd;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+footer ul {
+    list-style-type: none;
+}
+footer > ul {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: #e5e5e5bb 2px solid;
+}
+footer > ul > li > a {
+    text-transform: uppercase;
+    color: #FFF;
+    text-decoration: none;
+}
+footer > ul > li > ul > li {
+    margin-top: .75rem;
+    text-decoration: none;
+}
+footer > .infos p {
+    margin-top: .75rem;
+}
+footer > .infos {
+    display: flex;
+    align-items: flex-end;
+    gap: 7.5vw;
+    width: 100%;
+}
+footer > .infos > *:nth-child(2) {
+    flex-grow: 1;
+}
+footer > .infos > *:last-child {
+    color: #FFF;
+    font-size: .75rem;
+}
+
+/* ======================== Media Query ======================== */
+
+@media screen and (min-width: 1024px) {
+    body > * {
+        padding-right: 15vw;
+        padding-left: 15vw;
+    }
+    .article2 > img {
+        bottom: 1.5rem;
+        width: 25rem;
+        height: 18rem;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .lang.hide,
+    nav.hide,
+    .article1 .label,
+    footer .hide {
+        display: none;
+    }
+    .article1 > section {
+        position: relative;
+        left: 0;
+        width: 100%;
+        max-width: none;
+    }
+    .article2 {
+        padding-top: calc(40rem);
+    }
+    .article2 > .container {
+        position: absolute;
+        top: -5rem;
+        right: 0;
+        width: 100vw;
+        max-width: none;
+        align-items: flex-end;
+        gap: 0;
+    }
+    .article2 > .container > img {
+        width: 75%;
+        min-height: 10rem;
+    }
+    footer > ul {
+        flex-direction: column;
+    }
 }
