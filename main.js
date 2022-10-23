@@ -19,3 +19,12 @@ lang.querySelectorAll(".lang-item")
     lang.querySelector(".selected").classList.toggle("selected")
     item.classList.toggle("selected")
 }))
+
+// ======================== FAQ toggler ========================
+const questions = document.querySelectorAll(".faq>section")
+questions.forEach(elt => elt.querySelector(".toggle-question")
+.addEventListener("click", e => {
+    elt.querySelector(".toggle-question>i").classList.toggle("fa-chevron-down")
+    elt.querySelector(".toggle-question>i").classList.toggle("fa-chevron-right")
+    elt.querySelector("p").classList.toggle("hide")
+}))
