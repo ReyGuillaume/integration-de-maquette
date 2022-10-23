@@ -4,21 +4,24 @@
     position: relative;
     width: 75vw;
     height: min(30vw,30rem);
+    min-height: 8.5rem;
     margin-bottom: 3.5rem;
     transform: translateX(calc(-25vw / 8));
 }
 .main-header > img {
     width: 75vw;
     height: min(30vw,30rem);
+    min-height: 8.5rem;
 }
 .main-header > .main-header-comment {
     font-size: .75rem;
     font-weight: bold;
     background-color: #fff;
     padding: 1rem;
-    max-width: 50%;
+    max-width: 60%;
+    max-height: 7.5rem;
     position: absolute;
-    bottom: 0;
+    bottom: -1rem;
     left: 3vw;
     display: flex;
     flex-direction: column;
@@ -31,14 +34,16 @@
     width: 1em;
     height: 2px;
 }
-
+.main-header > .main-header-comment > p {
+    overflow: auto;
+}
 
 /* ======================== Container ======================== */
 
 .container {
     margin: 1.5rem 1.5rem;
     display: grid;
-	grid-template-columns: repeat(auto-fill,minmax(15rem, 45%));
+	grid-template-columns: repeat(auto-fill,minmax(15rem, 40%));
 	gap: 2rem;
 }
 .container > section {
