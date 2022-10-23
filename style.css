@@ -1,141 +1,3 @@
-::after,
-::before,
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    background: #FFF;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    overflow-x: hidden;
-}
-h2 {
-    text-transform: uppercase;
-}
-.primary-button {
-    color: #b52547;
-    background: none;
-    border: #b52547 1px solid;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    padding: .5rem 1rem;
-    margin-right: auto;
-}
-.download-button {
-    color: #b52547;
-    background: none;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-ul {
-    list-style-type: square;
-}
-ul li::marker {
-    color: #b52547;
-}
-/* ======================== Temp ======================== */
-
-img {
-    object-fit: cover;
-    width: 150px;
-    height: 150px;
-}
-
-/* ======================== Logo ======================== */
-
-.heading {
-    position: relative;
-    color: #b52547;
-    font-weight: bolder;
-    letter-spacing: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    border-bottom: #e5e5e5 1px solid;
-    padding: 2rem 0 1rem;
-    text-transform: uppercase;
-}
-.heading h1 {
-    font-size: 2.1rem;
-}
-.heading h1 + .logo {
-    width: 4.2rem;
-    height: 4.2rem;
-    border: #b52547 3px solid;
-    border-radius: 50%;
-}
-
-/* ======================== Languages ======================== */
-
-.lang {
-    list-style-type: none;
-    position: absolute;
-    top: 0;
-    right: .5rem;
-    display: flex;
-    gap: 2rem;
-}
-.lang a {
-    color: #000;
-    font-weight: normal;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: .75rem;
-}
-.lang .selected a {
-    color: #b52547;
-    opacity: 0.8;
-}
-
-/* ======================== Navigation ======================== */
-
-nav > * {
-    transition: .5s;
-}
-.toggle-menu {
-    color: #b52547;
-    background: #FFF;
-    box-shadow: 0 0 2px #cdcdcd;
-    border-radius: 0 0 0 .5em;
-    font-size: 1.5rem;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 1rem;
-    cursor: pointer;
-}
-.menu {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.menu a {
-    display: block;
-    color: #000;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: .75rem;
-    padding: .75em 1.25em;
-}
-.menu .selected a {
-    color: #b52547;
-}
-.menu .selected::after {
-    content: "";
-    display: block;
-    background-color: #b52547;
-    width: 50%;
-    height: 2px;
-    margin: auto;
-}
-
 /* ======================== Carousel ======================== */
 
 .carousel {
@@ -191,15 +53,6 @@ nav > * {
     }
 }
 
-/* ======================== Articles ======================== */
-
-body > article {
-    background: #FFF;
-    font-size: .85rem;
-}
-body article:nth-child(even) {
-    background: #F2F3F5;
-}
 /* ------------------------ Article 1 ------------------------ */
 .article1 {
     display: flex;
@@ -304,7 +157,7 @@ body article:nth-child(even) {
 }
 .article3 > .container {
     display: grid;
-	grid-template-columns: repeat(auto-fill,minmax(25rem,calc(1fr - 3rem)));
+	grid-template-columns: repeat(auto-fill,minmax(25rem, 45%));
 	grid-gap: 2rem;
 }
 .article3 > .container > section {
@@ -342,87 +195,18 @@ body article:nth-child(even) {
     margin-right: auto;
 }
 
-/* ======================== Footer ======================== */
-
-footer {
-    font-size: .75rem;
-    background: #cdcdcd;
-    padding: 1rem;
-    text-transform: uppercase;
-}
-footer ul {
-    list-style-type: none;
-}
-footer > ul {
-    padding: 1rem 0;
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    border-bottom: #e5e5e5bb 2px solid;
-}
-footer > ul > li > a {
-    text-transform: uppercase;
-    color: #FFF;
-    text-decoration: none;
-}
-footer > ul > li > ul > li {
-    margin-top: .75rem;
-    text-decoration: none;
-}
-footer > .infos p {
-    margin-top: .75rem;
-}
-footer > .infos {
-    display: flex;
-    align-items: flex-end;
-    gap: 7.5vw;
-    width: 100%;
-}
-footer > .infos > *:nth-child(2) {
-    flex-grow: 1;
-}
-footer > .infos > *:last-child {
-    color: #FFF;
-    font-size: .75em;
-}
-
 /* ======================== Media Query ======================== */
 
 @media screen and (min-width: 1024px) {
-    body > * {
-        padding-right: 15vw;
-        padding-left: 15vw;
-    }
     .article2 > img {
         bottom: 1.5rem;
         width: 25rem;
         height: 18rem;
     }
-    .toggle-menu {
-        display: none;
-    }
 }
 @media screen and (max-width: 1024px) {
-    .lang.hide,
-    .article1 .label,
-    footer .hide {
+    .article1 .label {
         display: none;
-    }
-    nav .hide {
-        background: #FFF;
-        position: absolute;
-        top: 0;
-        left: -45vw;
-        display: flex;
-        flex-direction: column;
-        width: 45vw;
-        padding: 1rem;
-        z-index: 10;
-        border-radius: 0 0 1em;
-    }
-    nav.shown .hide {
-        box-shadow: 0 0 2px #cdcdcd;
-        transform: translateX(45vw);
     }
     .article1 > section {
         position: relative;
@@ -448,8 +232,5 @@ footer > .infos > *:last-child {
     }
     .article3 {
         padding-top: 7rem;
-    }
-    footer > ul {
-        flex-direction: column;
     }
 }
